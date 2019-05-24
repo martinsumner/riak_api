@@ -15,7 +15,7 @@ basic_schema_test() ->
     cuttlefish_unit:assert_config(Config, "riak_api.pb_keepalive", true),
     cuttlefish_unit:assert_config(Config, "riak_api.honor_cipher_order", basho_vm(true, false)),
     cuttlefish_unit:assert_config(Config, "riak_api.tls_protocols", ['tlsv1.2']),
-    cuttlefish_unit:assert_config(Config, "riak_api.check_crl", basho_vm(true, false)),
+    cuttlefish_unit:assert_config(Config, "riak_api.check_crl", true),
     ok.
 
 override_schema_test() ->
